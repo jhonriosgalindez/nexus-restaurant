@@ -1,0 +1,70 @@
+
+<header class="header relative w-full h-[700px] text-white bg-[url('/images/toast-sandwich-with-chicken-chunks-and-egg.jpg')] bg-center bg-cover bg-fixed">
+
+  <!-- Top Menu -->
+  <div class="top-menu py-4 w-full lg:flex lg:justify-center lg:max-w-[90%] lg:mx-auto">
+    <ul class="flex justify-between items-center m-auto w-full max-w-[90%] text-[12px] lg:justify-start lg:text-[16px]">
+      <li class="p-2 font-bold bg-[#ffffff33] lg:mr-8">Open</li>
+      <li class="lg:mr-8">Mon-Wed: 11a-9p</li>
+      <li>Thurs-sat: 11a-9p</li>
+    </ul>
+    <div class="max-lg:hidden lg:flex lg:justify-end lg:items-center lg:w-[60%]">
+      <li>(123)456-789</li>
+      <li class="lg:ml-8">Av. Serlas 523, St. Mortz</li>
+    </div>
+  </div>
+
+  <!-- Separator -->
+  <p class="w-full border-b border-slate-500"></p>
+
+  <!-- Main Nav -->
+  <!-- Desktop Nav -->
+  <nav class="nav-desktop max-lg:hidden nav m-auto max-w-[90%]">
+    <ul>
+      <li><a href="#">Our Menus</a></li>
+      <li><a href="#">Our Catering & Events</a></li>
+      <li><a href="#">Our Location</a></li>
+    </ul>
+    <img src="../../public/images/logo-white.png" alt="logo">
+    <a href="#">Make a Reservation</a>
+  </nav>
+  
+  <!-- Mobile Nav -->
+  <nav class="nav-mobile flex justify-between my-4 mx-auto w-full max-w-[90%] lg:hidden">
+    <img src="../../public/images/logo-white.png" class="w-[120px]" alt="logo">
+    <span class="icon-menu cursor-pointer">
+      <img src="../../public/icons/bx-menu-alt-right.svg" class="w-[50px]" alt="icon-menu">
+    </span>
+  </nav>
+  
+  <!-- Dropdown -->
+  <ul class="dropdown hidden absolute top-0 w-full h-screen bg-[#252121] lg:hidden">
+    <div class="icon-close-menu flex justify-end mt-[20px] mr-[10px] cursor-pointer">
+      <img src="../../public/icons/bx-x.svg" class="w-[50px]" alt="icon-close-menu">
+    </div>
+    <div class="flex flex-col mt-[50px] items-center text-2xl">
+      <li class="mb-10"><a href="#">Our Menus</a></li>
+      <li class="mb-10"><a href="#">Catering & Events</a></li>
+      <li class="mb-10"><a href="#">Our Location</a></li>
+      <li><a href="#">Make a Reservation</a></li>
+    </div>
+  </ul>
+
+</header>
+
+<script>
+
+  const iconMenu = document.querySelector('.icon-menu')
+  const dropdown = document.querySelector('.dropdown')
+  const iconCloseMenu = document.querySelector('.icon-close-menu')
+
+
+  iconMenu.addEventListener('click', () => {
+    dropdown.classList.remove('hidden')
+  })
+
+  iconCloseMenu.addEventListener('click', () => {
+    dropdown.classList.add('hidden')
+  })
+
+</script>
