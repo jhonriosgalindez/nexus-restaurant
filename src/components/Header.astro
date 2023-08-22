@@ -1,5 +1,5 @@
 
-<header class="header relative w-full h-[700px] text-white bg-[url('/images/toast-sandwich-with-chicken-chunks-and-egg.jpg')] bg-center bg-cover bg-fixed">
+<header class="header relative w-full h-screen text-white bg-[url('/images/toast-sandwich-with-chicken-chunks-and-egg.jpg')] bg-center bg-cover bg-fixed">
 
   <!-- Top Menu -->
   <div class="top-menu py-4 w-full lg:flex lg:justify-center lg:max-w-[90%] lg:mx-auto">
@@ -19,14 +19,14 @@
 
   <!-- Main Nav -->
   <!-- Desktop Nav -->
-  <nav class="nav-desktop max-lg:hidden nav m-auto max-w-[90%]">
-    <ul>
-      <li><a href="#">Our Menus</a></li>
-      <li><a href="#">Our Catering & Events</a></li>
-      <li><a href="#">Our Location</a></li>
+  <nav class="nav-desktop justify-between items-center max-lg:hidden nav m-auto pt-4 max-w-[90%] lg:flex">
+    <ul class="flex w-[30%]">
+      <li class="pr-6 max-w-[100px]"><a href="#">Our Menus</a></li>
+      <li class="pr-6 max-w-[120px]"><a href="#">Our Catering & Events</a></li>
+      <li class="max-w-[90px]"><a href="#">Our Location</a></li>
     </ul>
-    <img src="../../public/images/logo-white.png" alt="logo">
-    <a href="#">Make a Reservation</a>
+    <img src="../../public/images/logo-white.png" class="w-[175px]" alt="logo">
+    <a href="#" class="flex justify-end w-[30%]">Make a Reservation</a>
   </nav>
   
   <!-- Mobile Nav -->
@@ -38,17 +38,23 @@
   </nav>
   
   <!-- Dropdown -->
-  <ul class="dropdown hidden absolute top-0 w-full h-screen bg-[#252121] lg:hidden">
+  <ul class="dropdown hidden absolute top-0 w-full h-screen bg-[#252121] animate-[show_0.5s_ease-in-out] lg:hidden">
     <div class="icon-close-menu flex justify-end mt-[20px] mr-[10px] cursor-pointer">
       <img src="../../public/icons/bx-x.svg" class="w-[50px]" alt="icon-close-menu">
     </div>
     <div class="flex flex-col mt-[50px] items-center text-2xl">
-      <li class="mb-10"><a href="#">Our Menus</a></li>
-      <li class="mb-10"><a href="#">Catering & Events</a></li>
-      <li class="mb-10"><a href="#">Our Location</a></li>
-      <li><a href="#">Make a Reservation</a></li>
+      <li class="link1 mb-10"><a href="#">Our Menus</a></li>
+      <li class="link2 mb-10"><a href="#">Catering & Events</a></li>
+      <li class="link3 mb-10"><a href="#">Our Location</a></li>
+      <li class="link4"><a href="#">Make a Reservation</a></li>
     </div>
   </ul>
+
+  <!-- Title and text optional -->
+  <div class="flex flex-col items-center justify-center h-[450px]">
+    <p class="mb-4 text-xl lg:font-medium">More flavor for less</p>
+    <h2 class="text-6xl text-center lg:text-8xl">Taste the Difference</h2>
+  </div>
 
 </header>
 
@@ -57,14 +63,33 @@
   const iconMenu = document.querySelector('.icon-menu')
   const dropdown = document.querySelector('.dropdown')
   const iconCloseMenu = document.querySelector('.icon-close-menu')
-
+  const link1 = document.querySelector('.link1')
+  const link2 = document.querySelector('.link2')
+  const link3 = document.querySelector('.link3')
+  const link4 = document.querySelector('.link4')
 
   iconMenu.addEventListener('click', () => {
-    dropdown.classList.remove('hidden')
+    dropdown.classList.toggle('hidden')
   })
 
   iconCloseMenu.addEventListener('click', () => {
-    dropdown.classList.add('hidden')
+    dropdown.classList.toggle('hidden')
+  })
+
+  link1.addEventListener('click', () => {
+    dropdown.classList.toggle('hidden')
+  })
+
+  link2.addEventListener('click', () => {
+    dropdown.classList.toggle('hidden')
+  })
+
+  link3.addEventListener('click', () => {
+    dropdown.classList.toggle('hidden')
+  })
+
+  link4.addEventListener('click', () => {
+    dropdown.classList.toggle('hidden')
   })
 
 </script>
