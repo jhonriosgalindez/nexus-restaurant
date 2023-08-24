@@ -4,16 +4,24 @@ import Section1 from '../components/Section1.astro';
 import Section2 from '../components/Section2.astro';
 import Section3 from '../components/Section3.astro';
 import Section4 from '../components/Section4.astro';
+import Footer from '../components/Footer.astro';
+import Stick from '../components/Stick.astro';
 import Layout from '../layouts/Layout.astro';
 
 ---
 
 <Layout title="Nexus Restaurant | Your Best Food">
-	<Header />
-	<main class="overflow-hidden">
-		<Section1 />
-		<Section2 />
-		<Section3 />
-		<Section4 />
-	</main>
+	<div class="relative">
+		<Header />
+		<main class="overflow-hidden">
+			<Section1 />
+			<Section2 />
+			<Section3 />
+			<Section4 />
+		</main>
+		<Footer />
+		<div class="absolute bottom-4 right-4 md:bottom-8 md:right-8">
+			<Stick />
+		</div>
+	</div>
 </Layout>
