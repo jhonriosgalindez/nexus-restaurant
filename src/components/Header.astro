@@ -1,6 +1,8 @@
 ---
-import fondo from '../../public/toast-sandwich-with-chicken-chunks-and-egg.jpg';
+import fondo from '../assets/images/toast-sandwich-with-chicken-chunks-and-egg.jpg';
 import logo from '../assets/images/logo-white.png';
+import iconMenu from '../assets/icons/bx-menu-alt-right.svg';
+import iconCloseMenu from '../assets/icons/bx-x.svg';
 ---
 
 <header id="header" class=`header relative w-full h-screen text-white bg-center bg-cover bg-fixed` style=`background-image: url('${fondo}')`>
@@ -35,16 +37,16 @@ import logo from '../assets/images/logo-white.png';
   
   <!-- Mobile Nav -->
   <nav class="nav-mobile flex justify-between my-4 mx-auto w-full max-w-[90%] lg:hidden">
-    <img src="../../public/static/images/logo-white.png" class="w-[120px]" alt="logo">
+    <img src=`${logo}` class="w-[120px]" alt="logo">
     <span class="icon-menu cursor-pointer">
-      <img src="../../public/static/icons/bx-menu-alt-right.svg" class="w-[50px]" alt="icon-menu">
+      <img src=`${iconMenu}` class="w-[50px]" alt="icon-menu">
     </span>
   </nav>
   
   <!-- Dropdown -->
   <ul class="dropdown hidden absolute top-0 w-full h-screen bg-[#252121] animate-[show_0.5s_ease-in-out] lg:hidden">
     <div class="icon-close-menu flex justify-end mt-[20px] mr-[10px] cursor-pointer">
-      <img src="../../public/static/icons/bx-x.svg" class="w-[50px]" alt="icon-close-menu">
+      <img src=`${iconCloseMenu}` class="w-[50px]" alt="icon-close-menu">
     </div>
     <div class="flex flex-col mt-[50px] items-center text-2xl">
       <li class="link1 mb-10"><a href="#our-menus">Our Menus</a></li>
